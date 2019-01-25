@@ -1,0 +1,33 @@
+body{
+    background-color:#FECC66;
+}
+
+li{
+	text-decoration: none;
+	display:inline;
+	background-color: white;
+	color: black;
+}
+
+a {
+	display:block;
+}
+
+a:visited {
+	color:blue;
+}
+a:hover {
+	color:red;
+}
+
+a:focus {
+	color:red;
+}
+
+a.current {
+	color:purple;
+	font-weight: bold;
+}
+a.skip{
+	
+}
