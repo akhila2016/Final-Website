@@ -4,30 +4,28 @@ body{
 
 li{
 	text-decoration: none;
-	display:inline;
-	background-color: white;
-	color: black;
-}
-
-a {
-	display:block;
+	color: #000000;
 }
 
 a:visited {
-	color:blue;
+	color:#0000FF;
 }
 a:hover {
-	color:red;
+	color:#FF0000;
 }
 
 a:focus {
-	color:red;
+	color:#FF0000;
 }
 
 a.current {
-	color:purple;
+	color:#800080;
 	font-weight: bold;
 }
-a.skip{
-	
+
+a.content {
+}
+
+nav {
+	display:block;
 }
