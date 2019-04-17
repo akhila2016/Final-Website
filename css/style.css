@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body{
-	font-family: 'Open Sans'; 
-	font-size: 16px;
-    background-color:#F1E6E6;
+    font-family: 'Open Sans'; 
+    font-size: 16px;
+    background-color: #F1E6E6;
     /*background-image: url('../images/background1.jpg');*/
     margin:20px;
 }
 li{
-	text-decoration: none;
-	color: #000000;
+  text-decoration: none;
+  color: #000000;
   margin: 12px;
 }
 
 a:visited {
-	color:#0000FF;
+  color:#0000FF;
 }
 a:hover {
-	color:#FF0000;
+  color:#FF0000;
 }
 
 a:focus {
-	color:#FF0000;
+  color:#FF0000;
 }
 p {
   margin: 5px 2px 5px 2px;
@@ -34,7 +34,7 @@ h1{
 
 h2 {
   font-size: 25px;
-	font-weight:bold;
+  font-weight:bold;
 }
 h3 {
   font-size: 20px;
@@ -53,9 +53,6 @@ a.current {
 	text-transform: uppercase;
 }
 */
-
-a.content {
-}
 
 figure figcaption {
 	color: #0A5B4B;
@@ -194,8 +191,8 @@ figure {
 footer {
 	min-height: 4vh;
 	background:#F1E6E6;
-	margin: 50px 0px 0px 0px;
-	font-size: 14px;
+  margin: 50px 0px 0px 0px;
+  font-size: 14px;
 }
 .container {
   display:grid;
@@ -248,7 +245,7 @@ footer {
   height: 400px;
   perspective: 1000px;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto;  
   &:hover .flip-card-inner,
   &.hover .flip-card-inner {
     transform: rotateY(180deg);
@@ -325,7 +322,7 @@ footer {
   position: absolute;
   top: 5px;
   right: 15px;
-  color: white;
+  color: #921e1e;
   font-size: 30px;
   cursor: pointer;
 }
