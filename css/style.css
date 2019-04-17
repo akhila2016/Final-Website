@@ -1,39 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body{
-  font-family: 'Open Sans'; 
-  font-size: 15px;
+	font-family: 'Open Sans'; 
+	font-size: 16px;
     background-color:#F1E6E6;
+    /*background-image: url('../images/background1.jpg');*/
     margin:20px;
 }
 li{
-  text-decoration: none;
-  color: #000000;
-  list-style-type: none;
+	text-decoration: none;
+	color: #000000;
+  margin: 12px;
 }
 
 a:visited {
-  color:#0000FF;
+	color:#0000FF;
 }
 a:hover {
-  color:#FF0000;
+	color:#FF0000;
 }
 
 a:focus {
-  color:#FF0000;
+	color:#FF0000;
 }
 p {
   margin: 5px 2px 5px 2px;
 }
 h1{
   color:green;
-  margin: 10px 2px 10px 2px;
+  margin: 25px 2px 25px 2px;
   text-align:center;
   font-size: 25px;
 }
 
 h2 {
   font-size: 25px;
-  font-weight:bold;
+	font-weight:bold;
 }
 h3 {
   font-size: 20px;
@@ -41,21 +42,23 @@ h3 {
   font-weight:bold;
 }
 
+/*
 a.current {
-  background-color: #76D7C4;
-  border: 2px solid #0A5B4B;
-  padding: 0px;
-  margin: 5px 0px 5px 0px;
-  color:#800080;
-  font-weight: bold;
-  text-transform: uppercase;
+	background-color: #76D7C4;
+	border: 2px solid #0A5B4B;
+	padding: 0px;
+	margin: 5px 0px 5px 0px;
+	color:#800080;
+	font-weight: bold;
+	text-transform: uppercase;
 }
+*/
 
 a.content {
 }
 
 figure figcaption {
-  color: #0A5B4B;
+	color: #0A5B4B;
 }
 
 nav ul li{
@@ -85,26 +88,23 @@ a.skip:focus, a.skip:active {
 }      
 
 .container img{
-
-  width:350px;
+	width:350px;
 }
 
+ul.tracks {
+  list-style-type: square;
+}
 
-/* carousel 
+/* Carousel 
 /* Slideshow container */
-/*.slideshow-container{
-  max-width: 1000px;
+.slideshow-container{
+  max-width:700px;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
-/*.mySlides {
-  display: none;
-}*/
-
 /* Next & previous buttons */
-/*.prev, .next {
+.prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -113,11 +113,11 @@ a.skip:focus, a.skip:active {
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-}*/
+}
 /*Captions for images*/
 
 figcaption {
@@ -151,22 +151,12 @@ figure {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color: black;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -174,7 +164,7 @@ figure {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 25px 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -185,38 +175,25 @@ figure {
   background-color: #717171;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
+.mySlides img {
+  width: 100%;
+} 
 
 .item img{
-  height: 75vh;
-  margin:0 auto;
+	height: 65vh;
+	margin:0 auto;
 }
+
 .images img{
-  width:50%;
+	width:50%;
   display: block;
   margin: 0 auto;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  padding: 10px;
 }
 
 footer {
-  min-height: 4vh;
-  background:#E8C096;
+	min-height: 4vh;
+	background:#E8C096;
 }
 .container {
   display:grid;
@@ -260,4 +237,254 @@ footer {
     h3 {
       text-align: center;
     }
+}
+
+/*flipcard css*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  position: relative;
+  margin: 0 auto ;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* Callout Message css*/
+.callout {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  border: 7px groove #EC115E;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: lightgrey;
+}
+
+/* Javascript Accordian*/
+.accordion {
+  background-color: #2C0398;
+  color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  margin: 10px 20px 0px 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+  color: #2C0398;
+}
+
+.panel {
+  padding: 10px 40px;
+  display: none;
+  background-color: #F1E6E6;
+  overflow: hidden;
+}
+
+/* Hamburger Icon Nav */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 11px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+#navbar .current {
+  background-color: #76D7C4;
+  color: #000000;
+}
+
+/*
+Sticky navbar 
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#content {
+  padding: 16px;
+}
+*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + #content {
+  padding-top: 60px;
 }
