@@ -10,18 +10,62 @@
 	<title>Mario Kart History</title>
 </head>
 <body>
-	<a href = "#content" class="skip"> Skip to Content</a>
+<a href = "#content" class="skip"> Skip to Content</a>
 	<header>
-		<nav>
-			<ul>
-			<li><a class="current" href = "index.html">History</a></li>
-			<li><a href = "features.html">Features</a></li>
-			<li><a href = "tracks.html">Tracks</a></li>
-			<li><a href = "gallery.html">Gallery</a></li>
-			</ul>
-		</nav>
-	<h1>Mario Kart History</h1>
+		<div class="topnav" id="navbar">
+		<a class="current" href = "index.html">History</a>
+		<a href = "features.html">Features</a>
+		<div class="dropdown">
+    		<button class="dropbtn">Tracks 
+      			<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-content">
+      			<a href="tracks.html">List of Tracks</a>
+      			<a href="carousel.html">Tracks Gallery</a>
+      		</div>
+      	</div>
+		<a href = "gallery.html">Gallery</a>
+  		<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">&#9776;</a>
+	</div>
 
+<!-- sticky nav javascript-->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<!-- Hamburger Menu Javascript -->
+<script>
+function responsiveNav() {
+  var x = document.getElementById("navbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<h1>Mario Kart History</h1>
+
+<!-- Callout -->
+<div class="callout">
+  <div class="callout-header">Heads Up</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+  <div class="callout-container">
+    <p>This website focuses mainly on <a href="https://en.wikipedia.org/wiki/Mario_Kart_Wii">Mario Kart Wii,</a> not all Mario Kart games.</p>
+  </div>
+</div>
 
 </header>
 <main id = "content">
@@ -48,7 +92,18 @@
 
 <p>Even though the core concept of Mario Kart has stayed the same, the change in gaming system evolution of time has brought about a significant change in visualization and capability. For example, there is a wider selection of characters and race tracks. In addition, Mario Kart also has a coin battle feature in which players have to try to collect and retain as many coins as possible. Although Nintendo has changed up many aspects of Mario kart, the core experience still remains the same.</p>
 
-<div class="images"><img src="images/mk_evolution.jpg" alt= "1992 vs. 2017"></div>
+<!--Flip card-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/mk_1992.jpg" alt="1992">
+    </div>
+    <div class="flip-card-back">
+      <img src="images/mk_2018.jpg" alt="2018">
+    </div>
+  </div>
+</div>
+
 </main>
 <footer> Published: 26 January 2019 </footer>
 </body>
