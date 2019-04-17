@@ -12,76 +12,152 @@
 <body>
 	<a href = "#content" class="skip"> Skip to Content</a>
 	<header>
-		<nav>
-			<ul>
-			<li><a href = "index.html">History</a></li>
-			<li><a href = "features.html">Features</a></li>
-			<li><a class = "current" href = "tracks.html">Tracks</a></li>
-			<li><a href = "gallery.html">Gallery</a></li>
-			</ul>
-		</nav>
-	<h1>Mario Kart Wii Tracks</h1>
+		<div class="topnav" id="navbar">
+		<a href = "index.html">History</a>
+		<a href = "features.html">Features</a>
+		<div class="dropdown">
+    		<button class="dropbtn">Tracks 
+      			<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-content">
+      			<a class="current" href="tracks.html">List of Tracks</a>
+      			<a href="carousel.html">Tracks Gallery</a>
+      		</div>
+      	</div>
+		<a href = "gallery.html">Gallery</a>
+  		<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">&#9776;</a>
+	</div>
 
+<!-- sticky nav javascript-->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<!-- Hamburger Menu Javascript -->
+<script>
+function responsiveNav() {
+  var x = document.getElementById("navbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<h1>Mario Kart Wii Tracks</h1>
 
 </header>
 <main id = "content">
 	<h2> Tracks </h2>
-	<h3> Mushroom Cup </h3>
+	<button class="accordion">Mushroom Cup:</button>
+	<div class="panel">
 	<ul>
 		<li>Moo Moo Meadows </li>
 		<li>Luigi Circuit </li>
 		<li>Toad's Factory </li>
 		<li>Mushroom Gorge </li>
 	</ul>
-	<h3> Flower Cup: </h3>
+	</div>
+
+	<button class="accordion">Flower Cup:</button>
+	<div class="panel">
 	<ul>
 		<li>Mario Circuit </li>
 		<li>Coconut Mall </li>
 		<li>DK Summit </li>
 		<li>Wario’s Gold Mine </li>
 	</ul>
-	<h3> Star Cup: </h3>
+	</div>
+
+	<button class="accordion">Star Cup:</button>
+	<div class="panel">
 	<ul>
 		<li>Daisy Circuit </li>
 		<li>Koopa Cape </li>
 		<li>Maple Treeway </li>
 		<li>Grumble Volcano </li>
 	</ul>
-	<h3> Special Cup: </h3>
+	</div>
+
+	<button class="accordion">Special Cup:</button>
+	<div class="panel">
 	<ul>
 		<li>Dry Dry Ruins </li>
 		<li>Moonview Highway </li>
 		<li>Bowser’s Castle </li>
 		<li>Rainbow Road </li>
 	</ul>
-	<h3> Shell Cup: </h3>
+	</div>
+
+	<button class="accordion">Shell Cup:</button>
+	<div class="panel">
 	<ul>
 		<li>Peach Beach </li>
 		<li>Yoshi Falls </li>
 		<li>Ghost Valley 2 </li>
 		<li>Mario Raceway </li>
 	</ul>
-	<h3> Banana Cup: </h3>
+	</div>
+
+	<button class="accordion">Banana Cup:</button>
+	<div class="panel">
 	<ul>
 		<li>Sherbet Land </li>
 		<li>Shy Guy Land </li>
 		<li>Delfino Square </li>
 		<li>Waluigi Stadium </li>
 	</ul>
-	<h3> Leaf Cup: </h3>
+	</div>
+
+	<button class="accordion">Leaf Cup:</button>
+	<div class="panel">
 	<ul>
 		<li>Desert Hills </li>
 		<li>Bowser Hills 3 </li>
 		<li>D.K.’s Jungle Parkway </li>
 		<li>Mario Circuit </li>
 	</ul>
-	<h3> Lightning Cup: </h3>
+	</div>
+
+	<button class="accordion">Lightning Cup:</button>
+	<div class="panel">
 	<ul> 
 		<li>Mario Circuit 3 </li>
 		<li>Peach Gardens </li>
 		<li>DK Mountain </li>
 		<li>Bowser’s Castle </li>
 	</ul>
+	</div>
+
+<!-- Accordion Javascript-->
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 
 </main>
 <footer> Published: 26 January 2019 </footer>
