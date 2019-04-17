@@ -2,7 +2,7 @@
 body{
 	font-family: 'Open Sans'; 
 	font-size: 16px;
-    background-color:#FFFFFF;
+    background-color:#F1E6E6;
     /*background-image: url('../images/background1.jpg');*/
     margin:20px;
 }
@@ -193,7 +193,7 @@ figure {
 
 footer {
 	min-height: 4vh;
-	background:#E8C096;
+	background:#F1E6E6;
 }
 .container {
   display:grid;
