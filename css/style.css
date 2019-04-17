@@ -281,7 +281,15 @@ footer {
   transform: rotateY(180deg);
   z-index: 1;
 }
+.flip-card-front img {
+  width: 300px;
+  height:400px;
+}
 
+.flip-card-back img {
+  width: 300px;
+  height:400px;
+}
 /* Callout Message css*/
 .callout {
   position: fixed;
