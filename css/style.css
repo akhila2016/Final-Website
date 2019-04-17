@@ -194,6 +194,7 @@ figure {
 footer {
 	min-height: 4vh;
 	background:#F1E6E6;
+	margin: 50px 0px 0px 0px;
 }
 .container {
   display:grid;
