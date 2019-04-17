@@ -195,6 +195,7 @@ footer {
 	min-height: 4vh;
 	background:#F1E6E6;
 	margin: 50px 0px 0px 0px;
+	font-size: 14px;
 }
 .container {
   display:grid;
@@ -257,6 +258,7 @@ footer {
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 20px 0px 0px 0px;
 }
 
 .flip-card:hover .flip-card-inner {
