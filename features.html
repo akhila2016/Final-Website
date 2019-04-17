@@ -12,19 +12,54 @@
 <body>
 	<a href = "#content" class="skip"> Skip to Content</a>
 	<header>
-		<nav>
-			<ul>
-			<li><a href = "index.html">History</a></li>
-			<li><a class="current" href = "features.html">Features</a></li>
-			<li><a href = "tracks.html">Tracks</a></li>
-			<li><a href = "gallery.html">Gallery</a></li>
-			</ul>
-		</nav>
-	<h1>Mario Kart Features</h1>
+		<div class="topnav" id="navbar">
+		<a href = "index.html">History</a>
+		<a class="current" href = "features.html">Features</a>
+		<div class="dropdown">
+    		<button class="dropbtn">Tracks 
+      			<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-content">
+      			<a href="tracks.html">List of Tracks</a>
+      			<a href="carousel.html">Tracks Gallery</a>
+      		</div>
+      	</div>
+		<a href = "gallery.html">Gallery</a>
+  		<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">&#9776;</a>
+	</div>
+
+<!-- sticky nav javascript-->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<!-- Hamburger Menu Javascript -->
+<script>
+function responsiveNav() {
+  var x = document.getElementById("navbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<h1>Mario Kart Features</h1>
 
 </header>
 <main id = "content">
-<i class="fa fa-car" </i></i>
 <h2>Racing</h2> 
 <p>Player gets to pick a Mario Kart character and a bike or cart to compete in a race with 11 other players. There are 32 possible tracks to race on, each having to do with a different setting/character in Mario Kart. There are multiple racing modes such as the <a href="https://mariokart.fandom.com/wiki/Grand_Prix">Grand Prix</a>, <a href="https://mariokart.fandom.com/wiki/Time_Trial">Time Trials</a>, and <a href="https://mariokart.fandom.com/wiki/VS_Race">Versus</a>.</p>
 <div class = "images"><img src="images/wario_mario.jpg" alt = "mario kart racing"/></div>
@@ -47,7 +82,6 @@
 		<li> Shine Thief: A game from <a href= "https://www.mariowiki.com/Mario_Kart:_Double_Dash!!">Mario Kart:Double Dash!!</a>, players must retrieve a <a href = "https://mariokart.fandom.com/wiki/Shine_Sprite">Shine Sprite</a> and hold it as the opponents try to force the player to drop it. The team must collectively keep the Shine Sprite between them for 30 seconds to win. </li>
 	</ul>
 
-<div class="images"><img src="images/rosalina.jpg" alt = "rosalina"/></div>
 </main>
 <footer> Published: 26 January 2019 </footer>
 </body>
