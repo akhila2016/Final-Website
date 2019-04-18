@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body{
-    font-family: 'Open Sans'; 
-    font-size: 16px;
-    background-color: #F1E6E6;
+	font-family: 'Open Sans'; 
+	font-size: 16px;
+  background-color: #F1E6E6;
     /*background-image: url('../images/background1.jpg');*/
     margin:20px;
 }
 li{
-  text-decoration: none;
-  color: #000000;
+	text-decoration: none;
+	color: #000000;
   margin: 12px;
 }
 
 a:visited {
-  color:#0000FF;
+	color:#0000FF;
 }
-a:hover {
-  color:#FF0000;
+a:hover a:focus{
+	color:#FF0000;
 }
 
-a:focus {
-  color:#FF0000;
-}
 p {
   margin: 5px 2px 5px 2px;
 }
@@ -34,7 +31,7 @@ h1{
 
 h2 {
   font-size: 25px;
-  font-weight:bold;
+	font-weight:bold;
 }
 h3 {
   font-size: 20px;
@@ -66,6 +63,7 @@ nav ul li{
   margin: 10px 0px 10px 0px;
 }
 
+/*skip content*/
 a.skip {
     left:-2000px;
     position: relative;
@@ -87,9 +85,23 @@ a.skip:focus, a.skip:active {
 .container img{
 	width:350px;
 }
-
+/*list of tracks in tracks*/
 ul.tracks {
   list-style-type: square;
+}
+
+
+/*Captions for images in gallery*/
+
+figcaption {
+    margin: 10px 0 0 0;
+    font-variant: small-caps;
+    font-family: Arial;
+    font-weight: bold;
+    color: #bb3333;
+}
+figure {
+    padding: 5px;
 }
 
 /* Carousel 
@@ -115,33 +127,14 @@ ul.tracks {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-/*Captions for images*/
 
-figcaption {
-    margin: 10px 0 0 0;
-    font-variant: small-caps;
-    font-family: Arial;
-    font-weight: bold;
-    color: #bb3333;
-}
-figure {
-    padding: 5px;
-}
-
-.hover img:hover {
-    transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a black background color to arrow with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
@@ -167,7 +160,7 @@ figure {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
+/*Turns arrow red when hovering*/
 .active, .dot:hover {
   background-color: #717171;
 }
@@ -194,11 +187,14 @@ footer {
   margin: 50px 0px 0px 0px;
   font-size: 14px;
 }
+/*Gallery image layout*/
 .container {
   display:grid;
   grid-template-columns: auto auto auto; 
 
 }
+
+/*Gallery responsive design */
 @media only screen and (min-width: 320px) {
     .container {
       grid-template-columns: 1fr;
@@ -246,17 +242,13 @@ footer {
   perspective: 1000px;
   position: relative;
   margin: 0 auto;  
-  &:hover .flip-card-inner,
-  &.hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
 }
 
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 1s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin: 20px 0px 0px 0px;
@@ -464,33 +456,7 @@ footer {
   color: #000000;
 }
 
-/*
-Sticky navbar 
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#content {
-  padding: 16px;
-}
-*/
+/*Sticky nav*/
 .sticky {
   position: fixed;
   top: 0;
