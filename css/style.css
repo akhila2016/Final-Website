@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body{
-	font-family: 'Open Sans'; 
-	font-size: 16px;
+  font-family: 'Open Sans'; 
+  font-size: 16px;
   background-color: #F1E6E6;
-    /*background-image: url('../images/background1.jpg');*/
-    margin:20px;
+  margin:20px;
 }
 li{
-	text-decoration: none;
-	color: #000000;
+  text-decoration: none;
+  color: #000000;
   margin: 12px;
 }
 
 a:visited {
-	color:#0000FF;
+  color:#0000FF;
 }
 a:hover a:focus{
-	color:#FF0000;
+  color:#FF0000;
 }
 
 p {
@@ -31,7 +30,7 @@ h1{
 
 h2 {
   font-size: 25px;
-	font-weight:bold;
+  font-weight:bold;
 }
 h3 {
   font-size: 20px;
@@ -39,20 +38,8 @@ h3 {
   font-weight:bold;
 }
 
-/*
-a.current {
-	background-color: #76D7C4;
-	border: 2px solid #0A5B4B;
-	padding: 0px;
-	margin: 5px 0px 5px 0px;
-	color:#800080;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-*/
-
 figure figcaption {
-	color: #0A5B4B;
+  color: #0A5B4B;
 }
 
 nav ul li{
@@ -83,7 +70,7 @@ a.skip:focus, a.skip:active {
 }      
 
 .container img{
-	width:350px;
+  width:350px;
 }
 /*list of tracks in tracks*/
 ul.tracks {
@@ -155,20 +142,20 @@ figure {
 } 
 
 .item img{
-	height: 65vh;
-	margin:0 auto;
+  height: 65vh;
+  margin:0 auto;
 }
 
 .images img{
-	width:50%;
+  width:50%;
   display: block;
   margin: 0 auto;
   padding: 10px;
 }
 
 footer {
-	min-height: 4vh;
-	background:#F1E6E6;
+  min-height: 4vh;
+  background:#F1E6E6;
   margin: 50px 0px 0px 0px;
   font-size: 14px;
 }
@@ -182,7 +169,7 @@ footer {
 /*Gallery responsive design */
 @media only screen and (min-width: 320px) {
     .container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
     h1{ 
